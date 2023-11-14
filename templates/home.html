@@ -1,14 +1,13 @@
 {% extends "layout.html" %}
 {% block body %}
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="/whiteboard">Whiteboard</a>
-        </div>
-        <li class="nav-item">
-            <input class="nav-link" type="Color" href="#" id="color_h" value="#ffffff">
-         </li>
-    </nav>
-    <canvas id="canvas_h" style="background-size: 100% 100%"></canvas>
-
-    <script src="{{ url_for('static', filename='js/canv_h.js')}}"></script>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+   <div class="container">
+      <a class="navbar-brand" href="/whiteboard">Whiteboard</a>
+   </div>
+   <li class="nav-item">
+      <input class="nav-link" type="Color" href="#" id="color_h" value="#ffffff">
+   </li>
+</nav>
+<canvas id="canvas_h" style="background-size: 100% 100%"></canvas>
+<script src="{{ url_for('static', filename='js/canv_h.js')}}"></script>
 {% endblock %}
