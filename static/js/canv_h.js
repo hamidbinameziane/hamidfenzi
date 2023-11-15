@@ -10,10 +10,10 @@ const pointer = {
   y: .5 * window.innerHeight,
 }
 const params = {
-  pointsNumber: 15,
-  widthFactor: 1,
+  pointsNumber: 5,
+  widthFactor: .5,
   spring: .3,
-  friction: .55
+  friction: .5
 };
 
 const trail = new Array(params.pointsNumber);
@@ -73,7 +73,7 @@ function update(t) {
     let g = parseInt(clr_h.value.substring(3, 5), 16)
     let b = parseInt(clr_h.value.substring(5, 7), 16)
     let rgba_c = 'rgba(' + r + ',' + g + ',' + b + ', 1)'
-    let rgba_l = 'rgba(' + r + ',' + g + ',' + b + ', .1)'
+    let rgba_l = 'rgba(' + r + ',' + g + ',' + b + ', 1)'
     ctx_h.shadowBlur = 40;
     ctx_h.shadowColor = rgba_c
     ctx_h.quadraticCurveTo(trail[i].x, trail[i].y, xc, yc);
